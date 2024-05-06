@@ -1,6 +1,11 @@
 module github.com/free5gc/ausf
 
-go 1.17
+go 1.21
+
+replace (
+	github.com/free5gc/openapi v1.0.8 => github.com/machi12/openapi v1.0.8
+	github.com/free5gc/util v1.0.6 => github.com/machi12/util v1.0.6
+)
 
 require (
 	github.com/antihax/optional v1.0.0
@@ -47,10 +52,10 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	golang.org/x/arch v0.3.0 // indirect
-	golang.org/x/crypto v0.17.0 // indirect
-	golang.org/x/net v0.17.0 // indirect
+	golang.org/x/crypto v0.21.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/oauth2 v0.0.0-20210810183815-faf39c7919d5 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
