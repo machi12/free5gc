@@ -2,8 +2,6 @@ module github.com/free5gc/udm
 
 go 1.21
 
-toolchain go1.22.2
-
 replace (
 	github.com/free5gc/openapi v1.0.8 => github.com/machi12/openapi v1.0.8
 	github.com/free5gc/util v1.0.6 => github.com/machi12/util v1.0.6
