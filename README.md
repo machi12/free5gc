@@ -16,9 +16,9 @@
 
 ## 对依赖项目的修改
 
-- [nas]{https://github.com/machi12/nas}
-- [openapi]{https://github.com/machi12/openapi}
-- [util]{https://github.com/machi12/util}
+- [nas](https://github.com/machi12/nas)
+- [openapi](https://github.com/machi12/openapi)
+- [util](https://github.com/machi12/util)
 
 ## 构建docker镜像
 
