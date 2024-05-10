@@ -1,4 +1,4 @@
-## 修改
+## 本项目的修改
 
 ### 1. AMF
 
@@ -14,6 +14,12 @@
 
 - NFs/udm/internal/sbi/producer/generate_auth_data.go：将5G-AKA协议的相关计算修改为5G-ESAKA协议的计算过程。
 
+## 对依赖项目的修改
+
+- [nas]{https://github.com/machi12/nas}
+- [openapi]{https://github.com/machi12/openapi}
+- [util]{https://github.com/machi12/util}
+
 ## 构建docker镜像
 
 1. 克隆free5gc-compose项目
@@ -26,11 +32,19 @@ cd free5gc-compose
 ```
 cd base
 git clone https://github.com/machi12/free5gc.git
-cd ..
 ```
 
-3. 构建docker镜像
+3. 添加go代理，在base目录下的Dockerfile文件中添加如下代码
 ```
+#下面三条配置用于保证在不同go语言版本中配置代理一定生效，建议都写上  
+RUN export GOPROXY=https://goproxy.io  
+RUN export GO111MODULE=on  
+RUN go env -w GOPROXY=https://goproxy.io 
+```
+
+4. 构建docker镜像（需要切换到free5gc-compose目录下）
+```
+cd ..
 make all
 docker compose -f docker-compose-build.yaml build
 ```
@@ -45,7 +59,7 @@ downloaded: h1:oErgVDTYmOYmPDCERQosVg7dTBIqhloX1vnYko5xgDY=
 go.sum:     h1:sUYFFmOXDLjyL4rU6zFnq81M4YluqP90Pso5e/J4UhA=
 ```
 
-- 构建docker镜像时出现磁盘空间不足问题，通过``docker system prune``命令来删除所有未使用的资源。
+- 构建docker镜像时出现磁盘空间不足问题，通过``docker system prune``命令来删除所有未使用的资源。或者给虚拟机分配更多的磁盘空间。
 ```
 ERROR: failed to update builder last activity time: write /home/machi/.docker/buildx/activity/.tmp-default1617546388: no space left on device
 ```
