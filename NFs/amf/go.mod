@@ -4,7 +4,7 @@ go 1.21
 
 replace (
 	github.com/free5gc/nas v1.1.3 => github.com/machi12/nas v1.1.3
-	github.com/free5gc/openapi v1.0.9-0.20240503143645-eac9f06c2f6b => github.com/machi12/openapi v1.0.8
+	github.com/free5gc/openapi v1.0.9-0.20240503143645-eac9f06c2f6b => github.com/machi12/openapi v1.0.9
 	github.com/free5gc/util v1.0.6 => github.com/machi12/util v1.0.6
 )
 
