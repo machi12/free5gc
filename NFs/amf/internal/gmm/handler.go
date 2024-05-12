@@ -518,7 +518,10 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 	}
 
 	// NOTE: 在这里对N进行赋值
-	ue.N = registrationRequest.N.Octet
+	if registrationRequest.N != nil {
+		ue.N = registrationRequest.N.GetNValue()
+		ue.GmmLog.Infof("N[%s]", ue.N)
+	}
 
 	// NgKsi: TS 24.501 9.11.3.32
 	switch registrationRequest.NgksiAndRegistrationType5GS.GetTSC() {
