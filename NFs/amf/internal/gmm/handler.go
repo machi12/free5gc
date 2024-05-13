@@ -414,6 +414,7 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 			ue.SecurityContextAvailable = false
 		} else {
 			m := nas.NewMessage()
+			ue.GmmLog.Infof("Registration Request Contents: [%s]", contents)
 			if err := m.GmmMessageDecode(&contents); err != nil {
 				return err
 			}
