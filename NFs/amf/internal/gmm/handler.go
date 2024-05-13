@@ -412,8 +412,11 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 			security.DirectionUplink, contents)
 		if err != nil {
 			ue.SecurityContextAvailable = false
+			// NOTE: 如果
+			ue.GmmLog.Infof("NASEncrypt err is not nil")
 		} else {
 			m := nas.NewMessage()
+			// NOTE: 打印请求消息内容（测试）
 			ue.GmmLog.Infof("Registration Request Contents: [%s]", contents)
 			if err := m.GmmMessageDecode(&contents); err != nil {
 				return err
