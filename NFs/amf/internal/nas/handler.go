@@ -30,7 +30,6 @@ func HandleNAS(ue *amf_context.RanUe, procedureCode int64, nasPdu []byte, initia
 
 	// NOTE: 打印
 	ue.AmfUe.GmmLog.Infof("HandleNAS called")
-	ue.AmfUe.GmmLog.Infof("nasPdu: [%s]", nasPdu)
 
 	msg, integrityProtected, err := nas_security.Decode(ue.AmfUe, ue.Ran.AnType, nasPdu, initialMessage)
 	if err != nil {
@@ -40,6 +39,7 @@ func HandleNAS(ue *amf_context.RanUe, procedureCode int64, nasPdu []byte, initia
 	ue.AmfUe.NasPduValue = nasPdu
 	ue.AmfUe.MacFailed = !integrityProtected
 	// NOTE: 打印
+	ue.AmfUe.GmmLog.Infof("nasPdu: [%s]", string(nasPdu))
 	ue.AmfUe.GmmLog.Infof("msg: [%s]", msg)
 
 	if err := Dispatch(ue.AmfUe, ue.Ran.AnType, procedureCode, msg); err != nil {

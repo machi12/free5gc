@@ -213,6 +213,17 @@ func Decode(ue *context.AmfUe, accessType models.AccessType, payload []byte,
 		payload = payload[1:]
 	}
 
+	//
+	epd := payload[0]
+	if epd == nasMessage.Epd5GSMobilityManagementMessage {
+		ue.GmmLog.Infof("GmmMessageDecode called")
+
+		if msg.GmmMessage.GmmHeader.GetMessageType() == nas.MsgTypeRegistrationRequest {
+			ue.GmmLog.Infof("DecodeRegistrationRequest called")
+			ue.GmmLog.Infof("payload: [%s]", string(payload))
+		}
+	}
+
 	err = msg.PlainNasDecode(&payload)
 
 	if err != nil {
