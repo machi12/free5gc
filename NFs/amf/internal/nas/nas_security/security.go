@@ -111,6 +111,9 @@ format is followed TS 24.501 9.1.1
 func Decode(ue *context.AmfUe, accessType models.AccessType, payload []byte,
 	initialMessage bool,
 ) (msg *nas.Message, integrityProtected bool, err error) {
+	// NOTE: 打印
+	ue.GmmLog.Infof("Decode called")
+
 	if ue == nil {
 		return nil, false, fmt.Errorf("amfUe is nil")
 	}
