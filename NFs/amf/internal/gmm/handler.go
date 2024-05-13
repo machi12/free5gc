@@ -398,6 +398,9 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 	ue.StopT3513()
 	ue.StopT3565()
 
+	// NOTE: 打印RegistrationRequest
+	ue.GmmLog.Infof("RegistrationRequest: [%s]", registrationRequest)
+
 	// TS 24.501 8.2.6.21: if the UE is sending a REGISTRATION REQUEST message as an initial NAS message,
 	// the UE has a valid 5G NAS security context and the UE needs to send non-cleartext IEs
 	// TS 24.501 4.4.6: When the UE sends a REGISTRATION REQUEST or SERVICE REQUEST message that includes a NAS message
@@ -412,7 +415,7 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 			security.DirectionUplink, contents)
 		if err != nil {
 			ue.SecurityContextAvailable = false
-			// NOTE: 如果
+			// NOTE: 如果加密出错
 			ue.GmmLog.Infof("NASEncrypt err is not nil")
 			ue.GmmLog.Infof("RegistrationRequest: [%s]", registrationRequest)
 		} else {
@@ -431,6 +434,9 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 			// IE as the initial NAS message that triggered the procedure
 			registrationRequest = m.RegistrationRequest
 		}
+	} else {
+		// NOTE: 如果不走上面的
+		ue.GmmLog.Infof("NASMessageContainer is nil or MacFailed is true")
 	}
 	// TS 33.501 6.4.6 step 3: if the initial NAS message was protected but did not pass the integrity check
 	ue.RetransmissionOfInitialNASMsg = ue.MacFailed
