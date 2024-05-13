@@ -521,6 +521,8 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 	if registrationRequest.N != nil {
 		ue.N = registrationRequest.N.GetNValue()
 		ue.GmmLog.Infof("N[%s]", ue.N)
+	} else {
+		ue.GmmLog.Infof("N is nil")
 	}
 
 	// NgKsi: TS 24.501 9.11.3.32
