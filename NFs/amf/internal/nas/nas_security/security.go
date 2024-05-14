@@ -1,6 +1,7 @@
 package nas_security
 
 import (
+	"bytes"
 	"encoding/binary"
 	"encoding/hex"
 	"fmt"
@@ -213,10 +214,16 @@ func Decode(ue *context.AmfUe, accessType models.AccessType, payload []byte,
 		payload = payload[1:]
 	}
 
-	//
+	// NOTE: 打印
 	epd := payload[0]
 	if epd == nasMessage.Epd5GSMobilityManagementMessage {
 		ue.GmmLog.Infof("GmmMessageDecode called")
+
+		buffer := bytes.NewBuffer(payload)
+		msg.GmmMessage = nas.NewGmmMessage()
+		if err := binary.Read(buffer, binary.BigEndian, &msg.GmmMessage.GmmHeader); err != nil {
+			return nil, false, fmt.Errorf("GMM NAS decode Fail: read fail - %+v", err)
+		}
 
 		if msg.GmmMessage.GmmHeader.GetMessageType() == nas.MsgTypeRegistrationRequest {
 			ue.GmmLog.Infof("DecodeRegistrationRequest called")
