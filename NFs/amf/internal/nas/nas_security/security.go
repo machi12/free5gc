@@ -227,7 +227,7 @@ func Decode(ue *context.AmfUe, accessType models.AccessType, payload []byte,
 
 		if msg.GmmMessage.GmmHeader.GetMessageType() == nas.MsgTypeRegistrationRequest {
 			ue.GmmLog.Infof("DecodeRegistrationRequest called")
-			ue.GmmLog.Infof("payload: [%s]", string(payload))
+			ue.GmmLog.Infof("payload: [%x]", string(payload))
 		}
 	}
 
