@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/free5gc/amf/internal/logger"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/models"
 )
 
 func SnssaiHexToModels(hexString string) (*models.Snssai, error) {

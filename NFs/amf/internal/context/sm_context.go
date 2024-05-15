@@ -3,8 +3,8 @@ package context
 import (
 	"sync"
 
-	"github.com/free5gc/openapi/models"
 	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/openapi/models"
 )
 
 type SmContext struct {

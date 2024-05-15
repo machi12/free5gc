@@ -14,12 +14,12 @@ import (
 	"github.com/free5gc/amf/internal/sbi/consumer"
 	"github.com/free5gc/amf/pkg/factory"
 	"github.com/free5gc/aper"
-	libngap "github.com/free5gc/ngap"
-	"github.com/free5gc/ngap/ngapConvert"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/machi12/nas"
 	"github.com/machi12/nas/nasMessage"
+	libngap "github.com/machi12/ngap"
+	"github.com/machi12/ngap/ngapConvert"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 func handleNGSetupRequestMain(ran *context.AmfRan,

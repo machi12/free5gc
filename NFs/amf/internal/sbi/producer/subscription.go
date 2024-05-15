@@ -6,8 +6,8 @@ import (
 
 	"github.com/free5gc/amf/internal/context"
 	"github.com/free5gc/amf/internal/logger"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi/models"
 )
 
 // TS 29.518 5.2.2.5.1

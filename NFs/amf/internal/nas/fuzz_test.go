@@ -11,11 +11,11 @@ import (
 	amf_context "github.com/free5gc/amf/internal/context"
 	"github.com/free5gc/amf/internal/logger"
 	amf_nas "github.com/free5gc/amf/internal/nas"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/machi12/nas"
 	"github.com/machi12/nas/nasMessage"
 	"github.com/machi12/nas/nasType"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 func FuzzHandleNAS(f *testing.F) {

@@ -20,8 +20,8 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/internal/util"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/openapi/models"
 	logger_util "github.com/free5gc/util/logger"
+	"github.com/machi12/openapi/models"
 )
 
 var HttpLog *logrus.Entry

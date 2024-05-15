@@ -11,9 +11,9 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/internal/util"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/Nnrf_NFManagement"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/Nnrf_NFManagement"
+	"github.com/machi12/openapi/models"
 )
 
 func BuildNFInstance(context *amf_context.AMFContext) (profile models.NfProfile, err error) {

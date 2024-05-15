@@ -15,7 +15,7 @@ import (
 	"strings"
 
 	"github.com/free5gc/aper"
-	"github.com/free5gc/ngap/ngapType"
+	"github.com/machi12/ngap/ngapType"
 )
 
 type messageDirection int
@@ -260,8 +260,8 @@ func generateHandler() {
 			"\"github.com/free5gc/amf/internal/context\"",
 			"\"github.com/free5gc/amf/internal/logger\"",
 			"ngap_message \"github.com/free5gc/amf/internal/ngap/message\"",
-			"\"github.com/free5gc/ngap\"",
-			"\"github.com/free5gc/ngap/ngapType\"",
+			"\"github.com/machi12/ngap\"",
+			"\"github.com/machi12/ngap/ngapType\"",
 		})
 
 	// generate handler functions
@@ -584,7 +584,7 @@ func generateDispatcher() {
 		[]string{
 			"\"github.com/free5gc/amf/internal/context\"",
 			"ngap_message \"github.com/free5gc/amf/internal/ngap/message\"",
-			"\"github.com/free5gc/ngap/ngapType\"",
+			"\"github.com/machi12/ngap/ngapType\"",
 		})
 
 	// Generate message dispatcher codes

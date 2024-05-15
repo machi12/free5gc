@@ -6,15 +6,15 @@ require (
 	github.com/antihax/optional v1.0.0
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/davecgh/go-spew v1.1.1
-	github.com/free5gc/aper v1.0.5
-	github.com/free5gc/ngap v1.0.8
-	github.com/free5gc/openapi v1.0.9-0.20240503143645-eac9f06c2f6b
+	github.com/free5gc/aper v1.0.6-0.20240503143507-2c4c4780b98f
 	github.com/free5gc/sctp v1.0.0
 	github.com/free5gc/util v1.0.6
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.3.0
-	github.com/machi12/nas v1.1.6
+	github.com/machi12/nas v1.1.7
+	github.com/machi12/ngap v1.0.8
+	github.com/machi12/openapi v1.1.0
 	github.com/mitchellh/mapstructure v1.4.2
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/pkg/errors v0.9.1
@@ -27,7 +27,6 @@ require (
 
 require (
 	github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1 // indirect
-	github.com/antonfisher/nested-logrus-formatter v1.3.1 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d // indirect

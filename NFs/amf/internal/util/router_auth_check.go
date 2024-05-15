@@ -7,7 +7,7 @@ import (
 
 	amf_context "github.com/free5gc/amf/internal/context"
 	"github.com/free5gc/amf/internal/logger"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/models"
 )
 
 type RouterAuthorizationCheck struct {

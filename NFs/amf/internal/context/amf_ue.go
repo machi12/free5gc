@@ -14,14 +14,14 @@ import (
 
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/fsm"
 	"github.com/free5gc/util/idgenerator"
 	"github.com/free5gc/util/ueauth"
 	"github.com/machi12/nas/nasMessage"
 	"github.com/machi12/nas/nasType"
 	"github.com/machi12/nas/security"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/models"
 )
 
 type OnGoingProcedure string

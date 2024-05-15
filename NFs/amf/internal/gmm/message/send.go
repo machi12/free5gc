@@ -8,9 +8,9 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	ngap_message "github.com/free5gc/amf/internal/ngap/message"
 	"github.com/free5gc/amf/internal/sbi/producer/callback"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 // backOffTimerUint = 7 means backoffTimer is null

@@ -25,17 +25,17 @@ import (
 	"github.com/free5gc/amf/internal/sbi/producer/callback"
 	"github.com/free5gc/amf/internal/util"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/ngap/ngapConvert"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/Nnrf_NFDiscovery"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/fsm"
 	"github.com/machi12/nas"
 	"github.com/machi12/nas/nasConvert"
 	"github.com/machi12/nas/nasMessage"
 	"github.com/machi12/nas/nasType"
 	"github.com/machi12/nas/security"
+	"github.com/machi12/ngap/ngapConvert"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/Nnrf_NFDiscovery"
+	"github.com/machi12/openapi/models"
 )
 
 const psiArraySize = 16
@@ -1639,7 +1639,7 @@ func HandleConfigurationUpdateComplete(ue *context.AmfUe,
 	// Stop timer T3555 in TS 24.501 Figure 5.4.4.1.1 in handler
 	ue.StopT3555()
 	// TODO: Send acknowledgment by Nudm_SMD_Info_Service to UDM in handler
-	//		import "github.com/free5gc/openapi/Nudm_SubscriberDataManagement" client.Info
+	//		import "github.com/machi12/openapi/Nudm_SubscriberDataManagement" client.Info
 
 	return nil
 }

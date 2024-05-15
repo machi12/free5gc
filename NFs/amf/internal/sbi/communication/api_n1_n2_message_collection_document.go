@@ -18,9 +18,9 @@ import (
 
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/internal/sbi/producer"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/models"
 )
 
 // N1N2MessageTransfer - Namf_Communication N1N2 Message Transfer (UE Specific) service Operation

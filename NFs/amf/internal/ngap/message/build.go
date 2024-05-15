@@ -9,10 +9,10 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/pkg/factory"
 	"github.com/free5gc/aper"
-	"github.com/free5gc/ngap"
-	"github.com/free5gc/ngap/ngapConvert"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/ngap"
+	"github.com/machi12/ngap/ngapConvert"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 func BuildPDUSessionResourceReleaseCommand(ue *context.RanUe, nasPdu []byte,

@@ -7,12 +7,12 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	ngap_message "github.com/free5gc/amf/internal/ngap/message"
 	"github.com/free5gc/amf/internal/sbi/consumer"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/fsm"
 	"github.com/machi12/nas"
 	"github.com/machi12/nas/nasConvert"
 	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 func DeRegistered(state *fsm.State, event fsm.EventType, args fsm.ArgsType) {

@@ -4,7 +4,7 @@ package ngap
 import (
 	"github.com/free5gc/amf/internal/context"
 	ngap_message "github.com/free5gc/amf/internal/ngap/message"
-	"github.com/free5gc/ngap/ngapType"
+	"github.com/machi12/ngap/ngapType"
 )
 
 func dispatchMain(ran *context.AmfRan, message *ngapType.NGAPPDU) {

@@ -13,9 +13,9 @@ import (
 	amf_nas "github.com/free5gc/amf/internal/nas"
 	ngap_message "github.com/free5gc/amf/internal/ngap/message"
 	"github.com/free5gc/amf/internal/sbi/consumer"
-	"github.com/free5gc/ngap/ngapType"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/ngap/ngapType"
+	"github.com/machi12/openapi/models"
 )
 
 func HandleSmContextStatusNotify(request *httpwrapper.Request) *httpwrapper.Response {

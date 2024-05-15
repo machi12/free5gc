@@ -15,12 +15,12 @@ import (
 
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/oauth"
 	"github.com/free5gc/util/idgenerator"
 	"github.com/machi12/nas/nasConvert"
 	"github.com/machi12/nas/security"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/models"
+	"github.com/machi12/openapi/oauth"
 )
 
 var (

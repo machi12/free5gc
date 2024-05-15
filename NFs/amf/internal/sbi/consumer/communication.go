@@ -5,10 +5,10 @@ import (
 
 	amf_context "github.com/free5gc/amf/internal/context"
 	"github.com/free5gc/amf/internal/logger"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/Namf_Communication"
-	"github.com/free5gc/openapi/models"
 	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/Namf_Communication"
+	"github.com/machi12/openapi/models"
 )
 
 func BuildUeContextCreateData(ue *amf_context.AmfUe, targetRanId models.NgRanTargetId,
