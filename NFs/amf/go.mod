@@ -7,7 +7,6 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/davecgh/go-spew v1.1.1
 	github.com/free5gc/aper v1.0.5
-	github.com/machi12/nas v1.1.6
 	github.com/free5gc/ngap v1.0.8
 	github.com/free5gc/openapi v1.0.9-0.20240503143645-eac9f06c2f6b
 	github.com/free5gc/sctp v1.0.0
@@ -15,6 +14,7 @@ require (
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.3.0
+	github.com/machi12/nas v1.1.6
 	github.com/mitchellh/mapstructure v1.4.2
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/pkg/errors v0.9.1
