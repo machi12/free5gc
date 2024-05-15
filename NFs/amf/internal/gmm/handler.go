@@ -531,7 +531,7 @@ func HandleRegistrationRequest(ue *context.AmfUe, anType models.AccessType, proc
 	// NOTE: 在这里对N进行赋值
 	if registrationRequest.N != nil {
 		ue.N = registrationRequest.N.GetNValue()
-		ue.GmmLog.Infof("N[%s]", ue.N)
+		ue.GmmLog.Infof("N[%x]", ue.N)
 	} else {
 		ue.GmmLog.Infof("N is nil")
 	}

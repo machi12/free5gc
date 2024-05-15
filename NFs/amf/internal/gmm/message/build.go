@@ -159,7 +159,14 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		authenticationRequest.AuthenticationParameterAUTN.SetAUTN(tmpArray)
 
 		// NOTE: 计算SNMAC
+		authenticationRequest.AuthenticationParameterSNMAC = nasType.
+			NewAuthenticationParameterSNMAC(nasMessage.AuthenticationRequestAuthenticationParameterSNMACType)
 		HNMAC, err := hex.DecodeString(av5gAka.HNMAC)
+		if err != nil {
+			return nil, err
+		}
+		// NOTE: 打印
+		ue.GmmLog.Infof("HNMAC: [%x]", HNMAC)
 		// 获取服务网络名称IDSN并赋值给authInfo的ServingNetworkName
 		var snName []byte
 		amfSelf := context.GetSelf()
@@ -171,13 +178,19 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 			if err != nil {
 				return nil, err
 			}
+			// NOTE: d打印
+			ue.GmmLog.Infof("SNMAC: [%x]", snName)
 		}
 		// TODO: 需要获取N的值
 		var N []byte = ue.N[:]
+		// NOTE: 打印
+		ue.GmmLog.Infof("N: [%x]", N)
 		temp := append(N, HNMAC...)
 		conc := append(temp, snName...)
 		snMacAll := sha256.Sum256(conc)
 		SNMAC := snMacAll[24:] // last 64 bits
+		// NOTE: 打印
+		ue.GmmLog.Infof("SNMAC: [%x]", SNMAC)
 		copy(tmpArray2[:], SNMAC[0:8])
 		authenticationRequest.AuthenticationParameterSNMAC.SetSNMACValue(tmpArray2)
 	case models.AuthType_EAP_AKA_PRIME:
