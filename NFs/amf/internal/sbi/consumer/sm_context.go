@@ -12,11 +12,11 @@ import (
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/internal/util"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/nas/nasMessage"
 	"github.com/free5gc/openapi"
 	"github.com/free5gc/openapi/Nnrf_NFDiscovery"
 	"github.com/free5gc/openapi/Nsmf_PDUSession"
 	"github.com/free5gc/openapi/models"
+	"github.com/machi12/nas/nasMessage"
 )
 
 func SelectSmf(

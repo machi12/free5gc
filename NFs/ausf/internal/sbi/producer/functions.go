@@ -17,9 +17,9 @@ import (
 	ausf_context "github.com/free5gc/ausf/internal/context"
 	"github.com/free5gc/ausf/internal/logger"
 	"github.com/free5gc/ausf/internal/sbi/consumer"
-	"github.com/free5gc/openapi/Nnrf_NFDiscovery"
-	Nudm_UEAU "github.com/free5gc/openapi/Nudm_UEAuthentication"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/Nnrf_NFDiscovery"
+	Nudm_UEAU "github.com/machi12/openapi/Nudm_UEAuthentication"
+	"github.com/machi12/openapi/models"
 )
 
 func KDF5gAka(param ...string) hash.Hash {

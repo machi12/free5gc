@@ -20,8 +20,8 @@ import (
 	"github.com/free5gc/udm/internal/sbi/ueauthentication"
 	"github.com/free5gc/udm/internal/sbi/uecontextmanagement"
 	"github.com/free5gc/udm/pkg/factory"
-	"github.com/free5gc/util/httpwrapper"
-	logger_util "github.com/free5gc/util/logger"
+	"github.com/machi12/util/httpwrapper"
+	logger_util "github.com/machi12/util/logger"
 )
 
 type UdmApp struct {

@@ -13,7 +13,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/free5gc/udm/internal/sbi/producer"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/util/httpwrapper"
 )
 
 // DeleteEeSubscription - Unsubscribe

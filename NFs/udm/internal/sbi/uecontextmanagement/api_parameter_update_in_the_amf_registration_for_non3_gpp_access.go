@@ -14,11 +14,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/udm/internal/logger"
 	"github.com/free5gc/udm/internal/sbi/producer"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/models"
+	"github.com/machi12/util/httpwrapper"
 )
 
 // UpdateAmfNon3gppAccess - update a parameter in the AMF registration for non-3GPP access

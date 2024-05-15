@@ -10,8 +10,8 @@ import (
 	"github.com/free5gc/udm/internal/logger"
 	"github.com/free5gc/udm/pkg/factory"
 	"github.com/free5gc/udm/pkg/service"
-	logger_util "github.com/free5gc/util/logger"
-	"github.com/free5gc/util/version"
+	logger_util "github.com/machi12/util/logger"
+	"github.com/machi12/util/version"
 )
 
 var UDM *service.UdmApp

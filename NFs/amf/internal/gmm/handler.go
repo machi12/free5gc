@@ -25,17 +25,17 @@ import (
 	"github.com/free5gc/amf/internal/sbi/producer/callback"
 	"github.com/free5gc/amf/internal/util"
 	"github.com/free5gc/amf/pkg/factory"
-	"github.com/free5gc/nas"
-	"github.com/free5gc/nas/nasConvert"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/nasType"
-	"github.com/free5gc/nas/security"
 	"github.com/free5gc/ngap/ngapConvert"
 	"github.com/free5gc/ngap/ngapType"
 	"github.com/free5gc/openapi"
 	"github.com/free5gc/openapi/Nnrf_NFDiscovery"
 	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/util/fsm"
+	"github.com/machi12/nas"
+	"github.com/machi12/nas/nasConvert"
+	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/nas/nasType"
+	"github.com/machi12/nas/security"
 )
 
 const psiArraySize = 16

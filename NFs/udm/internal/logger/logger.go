@@ -3,7 +3,7 @@ package logger
 import (
 	"github.com/sirupsen/logrus"
 
-	logger_util "github.com/free5gc/util/logger"
+	logger_util "github.com/machi12/util/logger"
 )
 
 var (

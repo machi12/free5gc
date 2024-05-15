@@ -3,11 +3,11 @@ package producer
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
 	udm_context "github.com/free5gc/udm/internal/context"
 	"github.com/free5gc/udm/internal/logger"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/models"
+	"github.com/machi12/util/httpwrapper"
 )
 
 func HandleUpdateRequest(request *httpwrapper.Request) *httpwrapper.Response {

@@ -16,12 +16,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/free5gc/openapi/models"
 	udm_context "github.com/free5gc/udm/internal/context"
 	"github.com/free5gc/udm/internal/logger"
 	"github.com/free5gc/udm/internal/util"
 	"github.com/free5gc/udm/pkg/factory"
-	logger_util "github.com/free5gc/util/logger"
+	"github.com/machi12/openapi/models"
+	logger_util "github.com/machi12/util/logger"
 )
 
 var HttpLog *logrus.Entry

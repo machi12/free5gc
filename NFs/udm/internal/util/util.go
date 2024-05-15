@@ -3,7 +3,7 @@ package util
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/models"
 )
 
 const (

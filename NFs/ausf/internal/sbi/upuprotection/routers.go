@@ -19,8 +19,8 @@ import (
 	"github.com/free5gc/ausf/internal/logger"
 	"github.com/free5gc/ausf/internal/util"
 	"github.com/free5gc/ausf/pkg/factory"
-	"github.com/free5gc/openapi/models"
 	logger_util "github.com/free5gc/util/logger"
+	"github.com/machi12/openapi/models"
 )
 
 // Route is the information for every URI.

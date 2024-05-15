@@ -7,7 +7,7 @@ import (
 	gmm_common "github.com/free5gc/amf/internal/gmm/common"
 	"github.com/free5gc/amf/internal/logger"
 	"github.com/free5gc/amf/internal/nas/nas_security"
-	"github.com/free5gc/nas"
+	"github.com/machi12/nas"
 )
 
 func HandleNAS(ue *amf_context.RanUe, procedureCode int64, nasPdu []byte, initialMessage bool) {

@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/models"
 )
 
 const (

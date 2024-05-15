@@ -3,11 +3,11 @@ package callback
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi/Nudm_SubscriberDataManagement"
-	"github.com/free5gc/openapi/Nudm_UEContextManagement"
-	"github.com/free5gc/openapi/models"
 	udm_context "github.com/free5gc/udm/internal/context"
 	"github.com/free5gc/udm/internal/logger"
+	"github.com/machi12/openapi/Nudm_SubscriberDataManagement"
+	"github.com/machi12/openapi/Nudm_UEContextManagement"
+	"github.com/machi12/openapi/models"
 )
 
 func DataChangeNotificationProcedure(notifyItems []models.NotifyItem, supi string) *models.ProblemDetails {

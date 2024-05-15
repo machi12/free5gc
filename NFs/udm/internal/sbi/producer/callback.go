@@ -3,10 +3,10 @@ package producer
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/udm/internal/logger"
 	"github.com/free5gc/udm/internal/sbi/producer/callback"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi/models"
+	"github.com/machi12/util/httpwrapper"
 )
 
 // HandleDataChangeNotificationToNFRequest ... Send Data Change Notification

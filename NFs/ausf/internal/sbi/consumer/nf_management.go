@@ -8,9 +8,9 @@ import (
 
 	ausf_context "github.com/free5gc/ausf/internal/context"
 	"github.com/free5gc/ausf/internal/logger"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/Nnrf_NFManagement"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi"
+	"github.com/machi12/openapi/Nnrf_NFManagement"
+	"github.com/machi12/openapi/models"
 )
 
 func BuildNFInstance(ausfContext *ausf_context.AUSFContext) (profile models.NfProfile, err error) {

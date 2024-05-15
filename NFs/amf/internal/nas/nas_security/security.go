@@ -8,11 +8,11 @@ import (
 	"reflect"
 
 	"github.com/free5gc/amf/internal/context"
-	"github.com/free5gc/nas"
-	"github.com/free5gc/nas/nasConvert"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/security"
 	"github.com/free5gc/openapi/models"
+	"github.com/machi12/nas"
+	"github.com/machi12/nas/nasConvert"
+	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/nas/security"
 )
 
 func Encode(ue *context.AmfUe, msg *nas.Message, accessType models.AccessType) ([]byte, error) {

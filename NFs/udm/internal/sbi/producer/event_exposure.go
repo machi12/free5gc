@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/free5gc/openapi/models"
 	udm_context "github.com/free5gc/udm/internal/context"
 	"github.com/free5gc/udm/internal/logger"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/machi12/openapi/models"
+	"github.com/machi12/util/httpwrapper"
 )
 
 func HandleCreateEeSubscription(request *httpwrapper.Request) *httpwrapper.Response {

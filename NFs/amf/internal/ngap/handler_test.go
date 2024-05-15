@@ -16,11 +16,11 @@ import (
 	ngaptesting "github.com/free5gc/amf/internal/ngap/testing"
 	"github.com/free5gc/amf/pkg/factory"
 	"github.com/free5gc/aper"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/nasType"
 	"github.com/free5gc/ngap"
 	"github.com/free5gc/ngap/ngapType"
 	"github.com/free5gc/openapi/models"
+	"github.com/machi12/nas/nasMessage"
+	"github.com/machi12/nas/nasType"
 )
 
 func NewAmfRan(conn net.Conn) *amf_context.AmfRan {

@@ -6,8 +6,8 @@ import (
 
 	ausf_context "github.com/free5gc/ausf/internal/context"
 	"github.com/free5gc/ausf/internal/logger"
-	"github.com/free5gc/openapi/Nnrf_NFDiscovery"
-	"github.com/free5gc/openapi/models"
+	"github.com/machi12/openapi/Nnrf_NFDiscovery"
+	"github.com/machi12/openapi/models"
 )
 
 func SendSearchNFInstances(nrfUri string, targetNfType, requestNfType models.NfType,
