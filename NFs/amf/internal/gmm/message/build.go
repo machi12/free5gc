@@ -174,11 +174,8 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		if mnc, err := strconv.Atoi(servedGuami.PlmnId.Mnc); err != nil {
 			return nil, err
 		} else {
-			snName, err = hex.DecodeString(fmt.Sprintf("5G:mnc%03d.mcc%s.3gppnetwork.org", mnc, servedGuami.PlmnId.Mcc))
-			if err != nil {
-				return nil, err
-			}
-			// NOTE: d打印
+			snName = []byte(fmt.Sprintf("5G:mnc%03d.mcc%s.3gppnetwork.org", mnc, servedGuami.PlmnId.Mcc))
+			// NOTE: 打印
 			ue.GmmLog.Infof("SNMAC: [%x]", snName)
 		}
 		// TODO: 需要获取N的值
