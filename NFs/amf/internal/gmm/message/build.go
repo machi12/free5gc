@@ -176,7 +176,7 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		} else {
 			snName = []byte(fmt.Sprintf("5G:mnc%03d.mcc%s.3gppnetwork.org", mnc, servedGuami.PlmnId.Mcc))
 			// NOTE: 打印
-			ue.GmmLog.Infof("SNMAC: [%x]", snName)
+			ue.GmmLog.Infof("SNName: [%x]", snName)
 		}
 		// TODO: 需要获取N的值
 		var N []byte = ue.N[:]
