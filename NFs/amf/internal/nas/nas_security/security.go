@@ -16,12 +16,17 @@ import (
 )
 
 func Encode(ue *context.AmfUe, msg *nas.Message, accessType models.AccessType) ([]byte, error) {
+	// NOTE: 打印
+	ue.GmmLog.Infof("Encode called")
+
 	if msg == nil {
 		return nil, fmt.Errorf("NAS Message is nil")
 	}
 
 	// Plain NAS message
 	if ue == nil || !ue.SecurityContextAvailable {
+		// NOTE: 打印
+		ue.GmmLog.Infof("ue == nil || !ue.SecurityContextAvailable")
 		if msg.GmmMessage == nil {
 			return nil, fmt.Errorf("msg.GmmMessage is nil")
 		}
@@ -46,6 +51,8 @@ func Encode(ue *context.AmfUe, msg *nas.Message, accessType models.AccessType) (
 			return nil, fmt.Errorf("NAS message type %d is requierd security, but security context is not available", msgType)
 		}
 		pdu, err := msg.PlainNasEncode()
+		// NOTE: 打印
+		ue.GmmLog.Infof("pdu: [%x]", pdu)
 		return pdu, err
 	} else {
 		// Security protected NAS Message

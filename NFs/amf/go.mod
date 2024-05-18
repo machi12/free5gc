@@ -12,7 +12,7 @@ require (
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.3.0
-	github.com/machi12/nas v1.1.7
+	github.com/machi12/nas v1.1.8
 	github.com/machi12/ngap v1.0.8
 	github.com/machi12/openapi v1.1.0
 	github.com/mitchellh/mapstructure v1.4.2

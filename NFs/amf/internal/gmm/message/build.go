@@ -167,7 +167,6 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		}
 		// NOTE: 打印
 		ue.GmmLog.Infof("HNMAC: [%x]", HNMAC)
-		// 获取服务网络名称IDSN并赋值给authInfo的ServingNetworkName
 		var snName []byte
 		amfSelf := context.GetSelf()
 		servedGuami := amfSelf.ServedGuamiList[0]
@@ -207,6 +206,9 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		ProtocolDiscriminator: nasMessage.Epd5GSMobilityManagementMessage,
 		SecurityHeaderType:    nas.SecurityHeaderTypeIntegrityProtectedAndCiphered,
 	}
+	// NOTE: 打印
+	ue.GmmLog.Infof("AuthenticationRequest: [%s]", authenticationRequest)
+	ue.GmmLog.Infof("Message: [%s]", m)
 	return nas_security.Encode(ue, m, accessType)
 }
 
