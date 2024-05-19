@@ -155,8 +155,8 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		authenticationRequest.AuthenticationParameterAUTN = nasType.
 			NewAuthenticationParameterAUTN(nasMessage.AuthenticationRequestAuthenticationParameterAUTNType)
 		authenticationRequest.AuthenticationParameterAUTN.SetLen(uint8(len(autn)))
-		copy(tmpArray[:], autn[0:16])
-		authenticationRequest.AuthenticationParameterAUTN.SetAUTN(tmpArray)
+		copy(tmpArray2[:], autn[0:8])
+		authenticationRequest.AuthenticationParameterAUTN.SetAUTN(tmpArray2)
 
 		// NOTE: 计算SNMAC
 		authenticationRequest.AuthenticationParameterSNMAC = nasType.
