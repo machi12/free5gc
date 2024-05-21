@@ -955,6 +955,9 @@ func GenerateAuthDataProcedure(authInfoRequest models.AuthenticationInfoRequest,
 	// Generate AUTN
 	logger.UeauLog.Tracef("AK=[%x]", AK)
 	logger.UeauLog.Tracef("HNMAC=[%x]", HNMAC)
+	// NOTE: 打印
+	logger.UeauLog.Infof("AK=[%x]", AK)
+	logger.UeauLog.Infof("HNMAC=[%x]", HNMAC)
 	// NOTE: 对AUTN的计算方式进行修改
 	//SQNxorAK := make([]byte, 6)
 	//for i := 0; i < len(sqn); i++ {
