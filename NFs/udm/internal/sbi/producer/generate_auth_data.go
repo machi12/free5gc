@@ -938,7 +938,7 @@ func GenerateAuthDataProcedure(authInfoRequest models.AuthenticationInfoRequest,
 
 	// NOTE: 不再使用原来的f1和f1*函数
 	// Generate HNMAC, AK
-	err = milenage.F1_New(opc, k, RAND, HNMAC, AK)
+	err = milenage.F1_New(opc, k, RAND, HNMAC)
 	if err != nil {
 		logger.UeauLog.Errorln("milenage F1 err:", err)
 	}
@@ -946,7 +946,7 @@ func GenerateAuthDataProcedure(authInfoRequest models.AuthenticationInfoRequest,
 	// NOTE: 不再使用原来的f2-f5函数
 	// Generate RES, CK, IK
 	// RES == XRES (expected RES) for server
-	err = milenage.F2345_New(opc, k, RAND, RES, CK, IK)
+	err = milenage.F2345_New(opc, k, RAND, RES, CK, IK, AK)
 	if err != nil {
 		logger.UeauLog.Errorln("milenage F2345 err:", err)
 	}
