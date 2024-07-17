@@ -12,9 +12,9 @@ require (
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.3.0
-	github.com/machi12/nas v1.1.9
-	github.com/machi12/ngap v1.0.8
-	github.com/machi12/openapi v1.1.0
+	github.com/machi12/nas v1.2.0
+	github.com/machi12/ngap v1.0.9
+	github.com/machi12/openapi v1.1.1
 	github.com/mitchellh/mapstructure v1.4.2
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/pkg/errors v0.9.1

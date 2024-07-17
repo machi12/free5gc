@@ -69,7 +69,7 @@ type AmfUe struct {
 	NasPduValue                        []byte
 	RetransmissionOfInitialNASMsg      bool
 	RequestIdentityType                uint8
-	/* NOTE: UE发送的随机数N（放在这里可能不太合适） */
+	// NOTE: Random number N sent by the UE
 	N [16]uint8
 	/* Used for AMF relocation */
 	TargetAmfProfile *models.NfProfile

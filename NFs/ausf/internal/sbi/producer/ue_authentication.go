@@ -218,7 +218,7 @@ func UeAuthPostRequestProcedure(updateAuthenticationInfo models.AuthenticationIn
 		av5gAka.Rand = authInfoResult.AuthenticationVector.Rand
 		av5gAka.Autn = authInfoResult.AuthenticationVector.Autn
 		av5gAka.HxresStar = hxresStar
-		// NOTE: 增加HNMAC
+		// NOTE: Add HNMAC
 		av5gAka.HNMAC = authInfoResult.AuthenticationVector.HNMAC
 		responseBody.Var5gAuthData = av5gAka
 

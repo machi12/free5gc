@@ -158,15 +158,13 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		copy(tmpArray2[:], autn[0:8])
 		authenticationRequest.AuthenticationParameterAUTN.SetAUTN(tmpArray2)
 
-		// NOTE: 计算SNMAC
+		// NOTE: Calculate SNMAC
 		authenticationRequest.AuthenticationParameterSNMAC = nasType.
 			NewAuthenticationParameterSNMAC(nasMessage.AuthenticationRequestAuthenticationParameterSNMACType)
 		HNMAC, err := hex.DecodeString(av5gAka.HNMAC)
 		if err != nil {
 			return nil, err
 		}
-		// NOTE: 打印
-		ue.GmmLog.Infof("HNMAC: [%x]", HNMAC)
 		var snName []byte
 		amfSelf := context.GetSelf()
 		servedGuami := amfSelf.ServedGuamiList[0]
@@ -174,18 +172,12 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 			return nil, err
 		} else {
 			snName = []byte(fmt.Sprintf("5G:mnc%03d.mcc%s.3gppnetwork.org", mnc, servedGuami.PlmnId.Mcc))
-			// NOTE: 打印
-			ue.GmmLog.Infof("SNName: [%x]", snName)
 		}
-		// TODO: 需要获取N的值
 		var N []byte = ue.N[:]
-		// NOTE: 打印
-		ue.GmmLog.Infof("N: [%x]", N)
 		temp := append(N, HNMAC...)
 		conc := append(temp, snName...)
 		snMacAll := sha256.Sum256(conc)
 		SNMAC := snMacAll[24:] // last 64 bits
-		// NOTE: 打印
 		ue.GmmLog.Infof("SNMAC: [%x]", SNMAC)
 		copy(tmpArray2[:], SNMAC[0:8])
 		authenticationRequest.AuthenticationParameterSNMAC.SetSNMACValue(tmpArray2)
@@ -206,9 +198,6 @@ func BuildAuthenticationRequest(ue *context.AmfUe, accessType models.AccessType)
 		ProtocolDiscriminator: nasMessage.Epd5GSMobilityManagementMessage,
 		SecurityHeaderType:    nas.SecurityHeaderTypeIntegrityProtectedAndCiphered,
 	}
-	// NOTE: 打印
-	ue.GmmLog.Infof("AuthenticationRequest: [%s]", authenticationRequest)
-	ue.GmmLog.Infof("Message: [%s]", m)
 	return nas_security.Encode(ue, m, accessType)
 }
 
